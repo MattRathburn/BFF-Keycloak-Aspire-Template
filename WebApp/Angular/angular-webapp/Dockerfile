@@ -13,7 +13,7 @@ RUN npm run build
 FROM nginx:alpine
 
 COPY --from=build /app/default.conf.template /etc/nginx/template/default.conf.template
-COPY --from=build /app/dist/weather/browser /usr/share/nginx/html
+COPY --from=build /app/dist/angular-webapp/browser /usr/share/nginx/html
 
 EXPOSE 80
 

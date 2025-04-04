@@ -59,6 +59,8 @@
         "NODE_ENV": "development",
         "services__weatherapi__http__0": "{weatherapi.bindings.http.url}",
         "services__weatherapi__https__0": "{weatherapi.bindings.https.url}",
+        "services__bff__http__0": "{bff.bindings.http.url}",
+        "services__bff__https__0": "{bff.bindings.https.url}",
         "PORT": "{angular.bindings.http.targetPort}"
       },
       "bindings": {
@@ -79,6 +81,8 @@
         "NODE_ENV": "development",
         "services__weatherapi__http__0": "{weatherapi.bindings.http.url}",
         "services__weatherapi__https__0": "{weatherapi.bindings.https.url}",
+        "services__bff__http__0": "{bff.bindings.http.url}",
+        "services__bff__https__0": "{bff.bindings.https.url}",
         "BROWSER": "none",
         "PORT": "{react.bindings.http.targetPort}"
       },
@@ -100,6 +104,8 @@
         "NODE_ENV": "development",
         "services__weatherapi__http__0": "{weatherapi.bindings.http.url}",
         "services__weatherapi__https__0": "{weatherapi.bindings.https.url}",
+        "services__bff__http__0": "{bff.bindings.http.url}",
+        "services__bff__https__0": "{bff.bindings.https.url}",
         "PORT": "{vue.bindings.http.targetPort}"
       },
       "bindings": {

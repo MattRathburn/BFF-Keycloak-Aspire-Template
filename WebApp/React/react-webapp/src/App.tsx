@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { WeatherForecast } from "./Models/WeatherForecast";
 import "./App.css";
+import { WeatherForecast } from "./Models/WeatherForecast";
 
 function App() {
-    const [forecasts, setForecasts] = useState<WeatherForecast[]>([]);
+    const [forecasts, setForecasts] = useState<Array<WeatherForecast>>([]);
 
     const requestWeather = async () => {
         const weather = await fetch("api/weatherforecast");
@@ -22,7 +22,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>React Weather</h1>
+                <h1>React (Vite) Weather</h1>
                 <table>
                     <thead>
                         <tr>

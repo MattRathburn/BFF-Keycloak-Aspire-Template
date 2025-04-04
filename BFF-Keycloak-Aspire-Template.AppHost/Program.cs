@@ -11,16 +11,26 @@ var weatherapi = builder.AddProject<Projects.WeatherAPI>("weatherapi");
 builder.AddNpmApp("angular", "../WebApp/Angular/angular-webapp")
     .WithReference(bff)
     .WithReference(weatherapi)
-    .WaitFor(bff);
+    .WaitFor(bff)
+    .WithHttpEndpoint(env: "PORT")
+    .WithExternalHttpEndpoints()
+    .PublishAsDockerFile();
 
 builder.AddNpmApp("react", "../WebApp/React/react-webapp")
     .WithReference(bff)
     .WithReference(weatherapi)
-    .WaitFor(bff);
+    .WaitFor(bff)
+    .WithEnvironment("BROWSER", "none")
+    .WithHttpEndpoint(env: "PORT")
+    .WithExternalHttpEndpoints()
+    .PublishAsDockerFile();
 
 builder.AddNpmApp("vue", "../WebApp/Vue/vue-webapp")
     .WithReference(bff)
     .WithReference(weatherapi)
-    .WaitFor(bff);
+    .WaitFor(bff)
+    .WithHttpEndpoint(env: "PORT")
+    .WithExternalHttpEndpoints()
+    .PublishAsDockerFile();
 
 builder.Build().Run();
